@@ -6,7 +6,7 @@
 <hibernate-configuration>
 
 	<session-factory>
-		<property name="hbm2ddl.auto">update</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
 		<property name="dialect"> org.hibernate.dialect.MySQLDialect</property>
 		<property name="connection.url">jdbc:mysql://localhost/hibernate</property>
 		<property name="connection.username">root</property>
@@ -14,7 +14,8 @@
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 		<mapping resource="hibernate_example/hb_web_application/user.hbm.xml"/>
 		<mapping class="hibernate_with_eclipse.hb_with_annotation.Student"/>  
-		<mapping resource="hibernate_with_eclipse/hb_with_xml/employee.hbm.xml"/>  
+		<mapping resource="hibernate_with_eclipse/hb_with_xml/employee.hbm.xml"/>
+		<mapping resource="inheritance_mapping/table_per_hierarchy/employee1.hbm.xml"/>  
 	</session-factory>
 	
 </hibernate-configuration>  

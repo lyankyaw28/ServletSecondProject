@@ -51,5 +51,7 @@
 	<classpathentry kind="lib" path="E:/Workspace/Own2/Hibernate/resource/jar/postgresql-42.2.2.jar"/>
 	<classpathentry kind="lib" path="E:/Workspace/Own2/Hibernate/resource/jar/proxool-0.8.3.jar"/>
 	<classpathentry kind="lib" path="E:/Workspace/Own2/Hibernate/resource/jar/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="E:/Workspace/Own2/Hibernate/resource/jar/log4j.jar"/>
+	<classpathentry kind="lib" path="E:/Workspace/Own2/Hibernate/resource/jar/slf4j.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
