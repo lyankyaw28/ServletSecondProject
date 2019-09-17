@@ -6,16 +6,31 @@
 <hibernate-configuration>
 
 	<session-factory>
-		<property name="hibernate.hbm2ddl.auto">update</property>
-		<property name="dialect"> org.hibernate.dialect.MySQLDialect</property>
-		<property name="connection.url">jdbc:mysql://localhost/hibernate</property>
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/hibernate</property>
 		<property name="connection.username">root</property>
 		<property name="connection.password">root</property>
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-		<mapping resource="hibernate_example/hb_web_application/user.hbm.xml"/>
-		<mapping class="hibernate_with_eclipse.hb_with_annotation.Student"/>  
-		<mapping resource="hibernate_with_eclipse/hb_with_xml/employee.hbm.xml"/>
-		<mapping resource="inheritance_mapping/table_per_hierarchy/employee1.hbm.xml"/>  
+		<property name="connection_pool_size">1</property>
+		<property name="hbm2ddl.auto">update</property>
+		<property name="show_sql">true</property>
+
+		<!-- inheritance_mapping.table_per_hierarchy -->
+		<mapping resource="inheritance_mapping/table_per_hierarchy/employee1.hbm.xml" />
+		
+		<!-- inheritance_mapping.tph_using_annotation -->
+		<mapping class="inheritance_mapping.tph_using_annotation.Employee2"/>  
+        <mapping class="inheritance_mapping.tph_using_annotation.Regular_Employee2"/>  
+        <mapping class="inheritance_mapping.tph_using_annotation.Contract_Employee2"/>
+        
+        <!-- inheritance_mapping.table_per_con_concrete -->
+		<mapping resource="inheritance_mapping/table_per_con_concrete/employee3.hbm.xml" />
+		
+		<!-- inheritance_mapping.tpc_using_annotation -->
+		<mapping class="inheritance_mapping.tpc_using_annotation.Employee4"/>  
+        <mapping class="inheritance_mapping.tpc_using_annotation.Contract_Employee4"/>  
+        <mapping class="inheritance_mapping.tpc_using_annotation.Regular_Employee4"/> 
+
 	</session-factory>
-	
+
 </hibernate-configuration>  

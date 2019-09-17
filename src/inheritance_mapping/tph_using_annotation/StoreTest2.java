@@ -1,4 +1,4 @@
-package inheritance_mapping.table_per_hierarchy;
+package inheritance_mapping.tph_using_annotation;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -8,9 +8,8 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
-public class StoreData1 {
-	public static void main(String[] args) {
-
+public class StoreTest2 {
+	public static void main(String args[]) {
 		StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();
 		Metadata meta = new MetadataSources(ssr).getMetadataBuilder().build();
 
@@ -19,15 +18,15 @@ public class StoreData1 {
 
 		Transaction t = session.beginTransaction();
 
-		Employee1 e1 = new Employee1();
+		Employee2 e1 = new Employee2();
 		e1.setName("Gaurav Chawla");
 
-		Regular_Employee1 e2 = new Regular_Employee1();
+		Regular_Employee2 e2 = new Regular_Employee2();
 		e2.setName("Vivek Kumar");
 		e2.setSalary(50000);
 		e2.setBonus(5);
 
-		Contract_Employee1 e3 = new Contract_Employee1();
+		Contract_Employee2 e3 = new Contract_Employee2();
 		e3.setName("Arjun Kumar");
 		e3.setPay_per_hour(1000);
 		e3.setContract_duration("15 hours");

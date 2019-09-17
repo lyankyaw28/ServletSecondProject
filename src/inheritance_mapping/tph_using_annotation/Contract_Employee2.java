@@ -1,7 +1,16 @@
-package inheritance_mapping.table_per_hierarchy;
+package inheritance_mapping.tph_using_annotation;
 
-public class Contract_Employee extends Employee1 {
+import javax.persistence.Column;
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+@Entity
+@DiscriminatorValue("contractemployee2")
+public class Contract_Employee2 extends Employee2 {
+	@Column(name = "pay_per_hour")
 	private float pay_per_hour;
+
+	@Column(name = "contract_duration")
 	private String contract_duration;
 
 	public float getPay_per_hour() {
