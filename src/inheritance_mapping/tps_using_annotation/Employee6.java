@@ -1,9 +1,6 @@
-package inheritance_mapping.tph_using_annotation;
+package inheritance_mapping.tps_using_annotation;
 
 import javax.persistence.Column;
-import javax.persistence.DiscriminatorColumn;
-import javax.persistence.DiscriminatorType;
-import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,11 +10,9 @@ import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "employee_2")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "type", discriminatorType = DiscriminatorType.STRING)
-@DiscriminatorValue(value = "employee2")
-public class Employee2 {
+@Table(name = "employee_6")
+@Inheritance(strategy = InheritanceType.JOINED)
+public class Employee6 {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 
@@ -42,4 +37,5 @@ public class Employee2 {
 	public void setName(String name) {
 		this.name = name;
 	}
+
 }

@@ -5,7 +5,7 @@
 
 
 <hibernate-mapping>
-	<class name="inheritance_mapping.table_per_con_concrete.Employee3" table="emp122">
+	<class name="inheritance_mapping.table_per_con_concrete.Employee3" table="employee_3">
 		<id name="id">
 			<generator class="increment"></generator>
 		</id>
@@ -13,13 +13,13 @@
 		<property name="name"></property>
 
 		<union-subclass
-			name="inheritance_mapping.table_per_con_concrete.Regular_Employee3" table="regemp122">
+			name="inheritance_mapping.table_per_con_concrete.Regular_Employee3" table="regular_employee_3">
 			<property name="salary"></property>
 			<property name="bonus"></property>
 		</union-subclass>
 
 		<union-subclass
-			name="inheritance_mapping.table_per_con_concrete.Contract_Employee3" table="contemp122">
+			name="inheritance_mapping.table_per_con_concrete.Contract_Employee3" table="contract_employee_3">
 			<property name="pay_per_hour"></property>
 			<property name="contract_duration"></property>
 		</union-subclass>

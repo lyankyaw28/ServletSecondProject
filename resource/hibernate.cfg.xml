@@ -30,6 +30,23 @@
 		<mapping class="inheritance_mapping.tpc_using_annotation.Employee4"/>  
         <mapping class="inheritance_mapping.tpc_using_annotation.Contract_Employee4"/>  
         <mapping class="inheritance_mapping.tpc_using_annotation.Regular_Employee4"/> 
+        
+        <!-- inheritance_mapping.table_per_subclass -->
+        <mapping resource="inheritance_mapping/table_per_subclass/employee5.hbm.xml"/>
+        
+        <!-- inheritance_mapping.tps_using_annotation -->
+        <mapping class="inheritance_mapping.tps_using_annotation.Employee6"/>  
+		<mapping class="inheritance_mapping.tps_using_annotation.Contract_Employee6"/>  
+		<mapping class="inheritance_mapping.tps_using_annotation.Regular_Employee6"/>
+		
+		<!-- hibernate_mapping.mapping_list -->
+		<mapping resource="hibernate_mapping/mapping_list/question1.hbm.xml"/>  
+		
+		<!-- hibernate_mapping.mapping_bag -->
+		<mapping resource="hibernate_mapping/mapping_bag/question2.hbm.xml"/> 
+		
+		<!-- hibernate_mapping.mapping_set -->
+		<mapping resource="hibernate_mapping/mapping_set/question3.hbm.xml"/>
 
 	</session-factory>
 

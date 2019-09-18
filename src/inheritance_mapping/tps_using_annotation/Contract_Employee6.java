@@ -1,16 +1,14 @@
-package inheritance_mapping.tpc_using_annotation;
+package inheritance_mapping.tps_using_annotation;
 
-import javax.persistence.AttributeOverride;
-import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "contract_employee_4")
-@AttributeOverrides({ @AttributeOverride(name = "id", column = @Column(name = "id")),
-		@AttributeOverride(name = "name", column = @Column(name = "name")) })
-public class Contract_Employee4 extends Employee4 {
+@Table(name = "contract_employee_6")
+@PrimaryKeyJoinColumn(name = "ID")
+public class Contract_Employee6 extends Employee6 {
 	@Column(name = "pay_per_hour")
 	private float pay_per_hour;
 
