@@ -47,6 +47,32 @@
 		
 		<!-- hibernate_mapping.mapping_set -->
 		<mapping resource="hibernate_mapping/mapping_set/question3.hbm.xml"/>
+		
+		<!-- hibernate_mapping.mapping_map -->
+		<mapping resource="hibernate_mapping/mapping_map/question4.hbm.xml"/>
+		
+		<!-- hibernate_mapping.one_to_many_xml -->
+		<mapping resource="hibernate_mapping/one_to_many_xml/question5.hbm.xml"/> 
+		
+		<!-- hibernate_mapping.one_to_many_annotation -->
+		<mapping class="hibernate_mapping.one_to_many_annotation.Question6"/> 
+		<mapping class="hibernate_mapping.one_to_many_annotation.Answer6"/> 
+		
+		<!-- hibernate_mapping.many_to_many_xml -->
+		<mapping resource="hibernate_mapping/many_to_many_xml/question7.hbm.xml"/> 
+		<mapping resource="hibernate_mapping/many_to_many_xml/answer7.hbm.xml"/>
+		
+		<!-- hibernate_mapping.many_to_many_annotation -->
+		<mapping class="hibernate_mapping.many_to_many_annotation.Question8"/>    
+    	<mapping class="hibernate_mapping.many_to_many_annotation.Answer8"/>
+    	
+    	<!-- hibernate_mapping.one_to_one_xml -->
+    	<mapping resource="hibernate_mapping/one_to_one_xml/employee7.hbm.xml"/>  
+    	<mapping resource="hibernate_mapping/one_to_one_xml/address7.hbm.xml"/>
+    	
+    	<!-- hibernate_mapping.one_to_one_annotation -->
+    	<mapping class="hibernate_mapping.one_to_one_annotation.Employee8"/>  
+    	<mapping class="hibernate_mapping.one_to_one_annotation.Address8"/>  
 
 	</session-factory>
 
