@@ -72,7 +72,18 @@
     	
     	<!-- hibernate_mapping.one_to_one_annotation -->
     	<mapping class="hibernate_mapping.one_to_one_annotation.Employee8"/>  
-    	<mapping class="hibernate_mapping.one_to_one_annotation.Address8"/>  
+    	<mapping class="hibernate_mapping.one_to_one_annotation.Address8"/>
+    	
+    	<!-- hibernate_mapping.one_to_one_xml -->
+    	<mapping resource="hibernate_mapping/many_to_one_xml/employee9.hbm.xml"/>    
+    	<mapping resource="hibernate_mapping/many_to_one_xml/address9.hbm.xml"/>
+    	
+    	<!-- hibernate_mapping.one_to_one_annotation -->
+    	<mapping class="hibernate_mapping.many_to_one_annotation.Employee10"/>  
+    	<mapping class="hibernate_mapping.many_to_one_annotation.Address10"/>
+    	
+    	<!-- hibernate_mapping.component_mapping -->
+    	<mapping resource="hibernate_mapping/component_mapping/employee11.hbm.xml"/> 
 
 	</session-factory>
 
